@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 1000px;
+    }
+
+    .black {
+        position: fixed;
+        top: 0;
+        background: #333;
+        width: 100%;
+        height: 50px;
+
+    }
+
+    .black ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .black ul li {
+        display: inline-block;
+        width: 100px;
+        color: red;
+    }
+
+    .blue {
+        position: fixed;
+        top: 0;
+        background: blue;
+        width: 100%;
+        height: 50px;
+    }
+</style>
+
+<body>
+    <div class="black">
+        <ul>
+            <li>link</li>
+            <li>link</li>
+            <li>link</li>
+            <li>link</li>
+        </ul>
+    </div>
+    <script>
+
+
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                if (scroll > 300) {
+                    $(".black").css("background", "blue");
+                }
+
+                else {
+                    $(".black").css("background", "#333");
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
